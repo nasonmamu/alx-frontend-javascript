@@ -1,16 +1,27 @@
 /**
- * Changes the quantity of unique grocery items to 100.
- * @param {Map<String, number>} map - A map of the name of a
- * grocery and its quantity.
+ * A weak map of endpoints and the number of calls made.
+ */
+export const weakMap = new WeakMap();
+
+/**
+ * The maximum number of calls for an endpoint.
+ */
+const MAX_ENDPOINT_CALLS = 5;
+
+/**
+ * Tracks the number of calls made to an API's endpoint.
+ * @param {{
+ *   protocol: String,
+ *   name: String,
+ * }} endpoint - The endpoint to make a request to.
  * @author Nason Mamu <https://github.com/nasonmamu>
  */
-export default function updateUniqueItems(map) {
-  if (!(map instanceof Map)) {
-    throw new Error('Cannot process');
+export function queryAPI(endpoint) {
+  if (!weakMap.has(endpoint)) {
+    weakMap.set(endpoint, 0);
   }
-  map.forEach((value, key) => {
-    if (value === 1) {
-      map.set(key, 100);
-    }
-  });
+  weakMap.set(endpoint, weakMap.get(endpoint) + 1);
+  if (weakMap.get(endpoint) >= MAX_ENDPOINT_CALLS) {
+    throw new Error('Endpoint load is high');
+  }
 }
