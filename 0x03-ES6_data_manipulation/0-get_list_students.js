@@ -1,5 +1,5 @@
 etrieves a list of students.
- * @author Festus Maithya <https://github.com/festusmaithyakcau>
+ * @author Nason Mamu <https://github.com/nasonmamu>
  * @returns {{id: Number, firstName: String, location: String}[]}
  */
 export default function getListStudents() {
