@@ -1,4 +1,5 @@
-etrieves a list of students.
+/**
+ * Retrieves a list of students.
  * @author Nason Mamu <https://github.com/nasonmamu>
  * @returns {{id: Number, firstName: String, location: String}[]}
  */
