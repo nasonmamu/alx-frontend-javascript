@@ -8,12 +8,10 @@
  * @author Nason Mamu <https://github.com/nasonmamu>
  * @returns {Number}
  */
-export default function getStudentIdsSum(students) {
-  if (students instance of Array) {
-    return students.reduce(
-      (prevStudent, curStudent) => prevStudent.id || prevStudent + curStudent.id,
-      0,
-    );
-  }
-  return 0;
+// 3-get_ids_sum.js
+
+function getStudentIdsSum(students) {
+  return students.reduce((sum, student) => sum + student.id, 0);
 }
+
+export default getStudentIdsSum;
