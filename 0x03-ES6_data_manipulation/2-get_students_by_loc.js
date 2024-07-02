@@ -1,4 +1,4 @@
-/**
+//**
  * Retrieves students in a given location.
  * @param {{
  *   id: Number,
