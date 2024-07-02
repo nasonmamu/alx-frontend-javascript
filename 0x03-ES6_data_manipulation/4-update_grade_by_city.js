@@ -3,7 +3,7 @@
  * @param {{
  *   id: Number,
  *   firstName: String,
- *   location: String
+ *   Location: String
  * }[]} students - The list of students.
  * @param {*} city - The city of students.
  * @param {{
