@@ -3,13 +3,13 @@
  * @param {{
  *   id: Number,
  *   firstName: String,
- *   location: String
+ *   Location: String
  * }[]} students - The list of students.
  * @author Nason Mamu <https://github.com/nasonmamu>
  * @returns {Number}
  */
 export default function getStudentIdsSum(students) {
-  if (students instanceof Array) {
+  if (students instance of Array) {
     return students.reduce(
       (prevStudent, curStudent) => prevStudent.id || prevStudent + curStudent.id,
       0,
