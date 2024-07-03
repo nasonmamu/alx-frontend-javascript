@@ -1,5 +1,5 @@
-
-mpilerOptions": {
+{
+  "compilerOptions": {
     "outDir": "./dist/",
     "sourceMap": true,
     "noImplicitAny": true,
