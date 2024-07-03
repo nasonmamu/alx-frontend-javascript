@@ -1,4 +1,4 @@
-mespace Subjects {
+namespace Subjects {
   export class Subject {
     teacher: Subjects.Teacher;
 
